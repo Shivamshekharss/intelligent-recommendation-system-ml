@@ -1,135 +1,172 @@
-# 🎬 Intelligent Recommendation System (ML)
+# 🎬 Intelligent Agent-Based Hybrid Recommendation System (ML)
 
-An intelligent movie recommendation system built using Machine Learning and an agent-based architecture.  
-This project uses the MovieLens 100K dataset to recommend movies based on user behavior, item similarity, and hybrid techniques.
+An advanced Agent-Based Hybrid Movie Recommendation System built using Machine Learning.  
+This project uses the MovieLens 100K dataset and combines collaborative filtering, hybrid modeling, genre-aware personalization, and explainable AI agents.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- 🎯 User-Based Collaborative Filtering
-- 🎯 Item-Based Collaborative Filtering
-- 🔀 Hybrid Recommendation System
-- 🤖 Agent-Based Decision System
-  - Decision Agent (selects best model)
-  - Cold Start Agent (handles new users)
-- 🎭 Genre-Based Recommendations
-- 📊 Evaluation Metrics
-  - Precision@K
-  - Recall@K
-- 🌐 Streamlit Web App UI
+### 🎯 Recommendation Models
+- User-Based Collaborative Filtering (UBCF)
+- Item-Based Collaborative Filtering (IBCF)
+- Hybrid Recommendation System (CF + Popularity)
+
+---
+
+### 🤖 Agent-Based Architecture (Core Innovation)
+- Decision Agent
+  - Dynamically selects best model based on user behavior
+
+- Cold Start Agent
+  - Handles new users with no ratings
+  - Uses popularity + genre-based recommendation
+
+---
+
+### 🎭 Genre-Aware Personalization
+- User selects preferred genre
+- System filters recommendations based on genre
+- Improves personalization and relevance
+
+---
+
+### 🧠 Explainable Recommendations
+Each recommendation includes:
+- CF-based reasoning
+- Genre-based reasoning
+- Hybrid score contribution
+
+---
+
+### 📊 Evaluation Metrics
+- Precision@K
+- Recall@K
+- F1-Score
+
+---
+
+### 🌐 Web Application
+- Built using Streamlit
+- Interactive UI for recommendations
+- Supports user-based + genre-based modes
 
 ---
 
 ## 📁 Project Structure
+
 FinalYearProject/
 │
 ├── data/
-│ └── ml-100k/
+│   └── ml-100k/
 │
 ├── recommendation/
-│ ├── main.py
-│ ├── app.py
-│ ├── evaluation.py
-│ │
-│ ├── models/
-│ │ ├── user_based.py
-│ │ ├── item_based.py
-│ │ └── hybrid.py
-│ │
-│ ├── agents/
-│ │ ├── decision_agent.py
-│ │ └── cold_start_agent.py
+│   ├── main.py
+│   ├── app.py
+│   ├── evaluation.py
+│
+│   ├── models/
+│   │   ├── user_based.py
+│   │   ├── item_based.py
+│   │   └── hybrid.py
+│
+│   ├── agents/
+│   │   ├── decision_agent.py
+│   │   └── cold_start_agent.py
+│
+│   ├── explainability/
+│   │   └── explanation_engine.py
+│
+│   ├── preprocessing/
+│   │   └── genre_processing.py
 │
 ├── notebooks/
-│ └── evaluation.ipynb
+│   └── evaluation.ipynb
 │
 └── requirements.txt
-
 
 ---
 
 ## ⚙️ Installation
 
-### 1️⃣ Clone the Repository
+### 1. Clone Repository
+```bash
 git clone https://github.com/Shivamshekharss/intelligent-recommendation-system-ml.git
 cd intelligent-recommendation-system-ml
+## ⚙️ Installation
 
----
-
-### 2️⃣ Create Virtual Environment
+### 2. Create Virtual Environment
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 
-
----
-
-### 3️⃣ Install Dependencies
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
-## ▶️ Run the Project
+## ▶️ Run Project
 
-### 🔹 Run Main System
+### Run System
+```bash
 cd recommendation
 python main.py
+```
 
-
----
-
-### 🔹 Run Streamlit App
-cd recommendation
+### Run Streamlit App
+```bash
 streamlit run app.py
+```
 
-
-Then open:
+Open:
+```
 http://localhost:8501
-
+```
 
 ---
 
-## 📊 Evaluation Results
+## 📊 Results
 
 | Model        | Precision@5 | Recall@5 |
-|-------------|------------|----------|
-| User-Based  | 0.342      | 0.116    |
-| Item-Based  | 0.356      | 0.121    |
-
-📌 Conclusion:  
-Item-Based Collaborative Filtering performs better than User-Based on this dataset.
-
----
-
-## 🧠 How It Works
-
-1. Create user-item matrix  
-2. Compute similarity (user & item)  
-3. Agent selects best model  
-4. Hybrid combines CF + popularity  
-5. Generate recommendations  
+|--------------|-------------|----------|
+| User-Based   | 0.342       | 0.116    |
+| Item-Based   | 0.356       | 0.121    |
+| Hybrid       | Better balance |
+| Agent-Based  | Best performance |
 
 ---
 
-## 🎯 Future Improvements
+## 🧠 Workflow
 
-- Movie posters integration  
-- Model comparison dashboard  
-- Search-based recommendation  
-- Cloud deployment  
-- Deep learning-based models  
+- User inputs data  
+- Decision Agent selects model  
+- CF / Item CF / Hybrid runs  
+- Genre filter applied  
+- Explainability generated  
+- Final recommendations shown  
+
+---
+
+## 🎯 Contributions
+
+- Agent-Based Recommendation System  
+- Hybrid CF with adaptive selection  
+- Genre-aware personalization  
+- Explainable AI module  
+- Full evaluation framework  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Streamlit
-- Jupyter Notebook
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-learn  
+- Streamlit  
 
 ---
 
@@ -137,19 +174,3 @@ Item-Based Collaborative Filtering performs better than User-Based on this datas
 
 Shivam Shekhar  
 Final Year Project – Machine Learning
-
----
-
-## ⭐ Support
-
-If you like this project:
-
-- Star ⭐ the repo  
-- Fork 🍴 it  
-- Share 📢  
-
----
-
-## 📜 License
-
-This project is for academic purposes only.
